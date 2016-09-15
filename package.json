@@ -1,0 +1,23 @@
+{
+  "name": "bug-free-carnival",
+  "version": "1.0.0",
+  "description": "Grand Parade Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web": "http-server public -p 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrandParade/bug-free-carnival.git"
+  },
+  "author": "Jakub Mrowiec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrandParade/bug-free-carnival/issues"
+  },
+  "homepage": "https://github.com/GrandParade/bug-free-carnival#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
