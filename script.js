@@ -1,14 +1,24 @@
+var storedNotes = [];
 $(document).ready(function() {
     
-    // DOUBLE CLICK FUNCTION
-    $( ".dragThis" ).dblclick(function() {
-//        $(".dragThis").css('width', '100%');
-//        $('.dragThis').css("height", $(document).height());
+    // DOUBLE CLICK FUNCTION    
+    $('.dragThis').dblclick(function() {
+        $(this).css({"position": 'fixed', 'width': '100%', 'height': '100%', 'top': '0', 'left': '0'});
+        $(this).find('.drag-head').css('height', '40px');
+        $(this).find('textarea').css('font-size', '20px');
+        $(this).find('.remove').css('font-size', '30px');
+    });
+    
+    $('.dragThis').click(function() {
+        $(this).css({"position": "relative", "width": "200px", "height": "auto"});
+        $(this).find('.drag-head').css('height', '25px');
+        $(this).find('textarea').css('font-size', '13px');
+        $(this).find('.remove').css('font-size', '14px');
     });
     
     // NOTES SYSTEM
     var notes = $("#notes");
-    var storedNotes = [];
+    
     
     function changeZIndex(className) {
       var element = $("."+className)[0];
@@ -56,7 +66,7 @@ $(document).ready(function() {
                           '  <li class="posX"></li> '+
                           '  <li class="posY"></li> '+
                       '  </ul> '+
-                        '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
+                        '<textarea name="txt" ondblclick="mysave(\''+hash+'\',this.value);" class="dragThis-txt" placeholder="note..."></textarea> '+
                   '  </div> '+
                 '</div>');
                 
@@ -95,3 +105,20 @@ var stringJson =JSON.stringify(obj);//przerobienie obiektu na string do zapisu
 console.log(stringJson);
 var objBack=JSON.parse( stringJson );//odczyt obiektu ze stringa
 console.log(objBack);
+
+
+
+
+function mysave(fieldId,val){//field id jest hashem
+    
+    for(i=0;i<storedNotes.length;i++){
+        if(storedNotes[i].hash==fieldId){
+            temp = storedNotes[i];
+            temp.content = val;            
+        }
+        
+        var stringJson = JSON.stringify(temp);//przerobienie obiektu na string do zapisu
+        localStorage.setItem(fieldId, stringJson);//zapis
+        alert(stringJson);
+    }    
+}
