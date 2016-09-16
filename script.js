@@ -5,6 +5,19 @@ $(document).ready(function() {
     var notes = $("#notes");
     var storedNotes = [];
     
+    function makeDraggable(className) {
+      $('.'+className).draggable(
+      {
+          drag: function(){
+              var offset = $(this).offset();
+              var xPos = offset.left;
+              var yPos = offset.top;
+              $('#posX').text('x: ' + xPos);
+              $('#posY').text('y: ' + yPos);
+          }
+      });
+    }
+    
     function addNewNote() {
       console.log("adding notes");
       
@@ -23,33 +36,12 @@ $(document).ready(function() {
                   '  </div> '+
                 '</div>');
                 
-                
-                $('.'+hash).draggable(
-                {
-                    drag: function(){
-                        var offset = $(this).offset();
-                        var xPos = offset.left;
-                        var yPos = offset.top;
-                        $('#posX').text('x: ' + xPos);
-                        $('#posY').text('y: ' + yPos);
-                    }
-                });
+      makeDraggable(hash);
+
     }
     
     $("#addNewNote").click(function() {
         addNewNote();
-    });
-    
-    
-    $('.dragThis').draggable(
-    {
-        drag: function(){
-            var offset = $(this).offset();
-            var xPos = offset.left;
-            var yPos = offset.top;
-            $('#posX').text('x: ' + xPos);
-            $('#posY').text('y: ' + yPos);
-        }
     });
 });
 
@@ -73,5 +65,3 @@ var stringJson =JSON.stringify(obj);//przerobienie obiektu na string do zapisu
 console.log(stringJson);
 var objBack=JSON.parse( stringJson );//odczyt obiektu ze stringa
 console.log(objBack);
-
-
