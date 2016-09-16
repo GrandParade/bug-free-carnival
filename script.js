@@ -47,8 +47,7 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu w
 
 var obj={
     first:'ala',
-    second:'kot'    
+    second:'kot'
+    
 }
-var string =JSON.stringify(obj);
-//alert(string);
 
