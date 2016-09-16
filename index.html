@@ -31,12 +31,16 @@
                 //initMap('gMap',50.15710567340038,19.811010360717773);
 				//makeMarker({lat: 50.157105, lng: 19.81101});
             });
+            document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/"; 
+            var x=document.cookie;
+            alert(x['username']);
         </script>
 		
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 					<div id="block" style="width:500px; height:500px; background:green;">
+                        
 					</div>
 				</div>
 			</div>
