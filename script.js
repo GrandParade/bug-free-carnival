@@ -37,6 +37,11 @@ $(document).ready(function() {
                 '</div>');
                 
       makeDraggable(hash);
+      
+      storedNotes.push({createdAt: new Date(), hash : hash, content : '' });
+      
+      console.log(storedNotes);
+      
 
     }
     
