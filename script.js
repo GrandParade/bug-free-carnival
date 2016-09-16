@@ -1,5 +1,10 @@
 $(document).ready(function() {
     
+    // DOUBLE CLICK FUNCTION
+    $( ".dragThis" ).dblclick(function() {
+//        $(".dragThis").css('width', '100%');
+//        $('.dragThis').css("height", $(document).height());
+    });
     
     // NOTES SYSTEM
     var notes = $("#notes");
