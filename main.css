@@ -2,6 +2,8 @@
     width: 200px;
     height: auto !important;
     border: 3px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 5px;
 }
 .dragThis .drag-head {
@@ -35,4 +37,16 @@
 }
 .dragThis .position li {
     list-style: none;
+}
+
+.dragThis .drag-inner textarea {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    resize: vertical;
+    padding: 5px;
+    color: #000;
 }
