@@ -63,8 +63,15 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu w
   //alert( localStorage.getItem( localStorage.key( i ) ) );
 }
 
-var obj={
+var obj={//przykladowy obiekt
     first:'ala',
     second:'kot'
     
 }
+console.log(obj);
+var stringJson =JSON.stringify(obj);//przerobienie obiektu na string do zapisu
+console.log(stringJson);
+var objBack=JSON.parse( stringJson );//odczyt obiektu ze stringa
+console.log(objBack);
+
+
