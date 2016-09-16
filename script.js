@@ -1,4 +1,33 @@
-$(document).ready(function() {    
+$(document).ready(function() {
+    
+    
+    // NOTES SYSTEM
+    var notes = $("#notes");
+    var storedNotes = [];
+    
+    function addNewNote() {
+      console.log("adding notes");
+      
+      var hash = md5(new Date());
+      
+      notes.append('          <div class="dragThis '+hash+'"> '+
+                    '<div class="drag-head"> '+
+                        '<span class="glyphicon glyphicon-remove remove" aria-hidden="true"></span> '+
+                    '</div> '+
+                    '<div class="drag-inner"> '+
+                      '  <ul class="position"> '+
+                          '  <li id="posX"></li> '+
+                          '  <li id="posY"></li> '+
+                      '  </ul> '+
+                        '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
+                  '  </div> '+
+                '</div>');
+    }
+    
+    $("#addNewNote").click(function() {
+        addNewNote();
+    });
+    
     
     $('#dragThis').draggable(
     {
@@ -19,7 +48,7 @@ localStorage.setItem("lastname", "Smith");//zapis
 localStorage.setItem("name", "John");//zapis
 
 for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu wszystkich danych
-  alert( localStorage.getItem( localStorage.key( i ) ) );
+  //alert( localStorage.getItem( localStorage.key( i ) ) );
 }
 
 var obj={
@@ -27,4 +56,3 @@ var obj={
     second:'kot'
     
 }
-
