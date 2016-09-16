@@ -20,7 +20,7 @@ This is team task, so everyone should work and contribute to final solution.
 
 During your task you can ask supervisors if anything is unclear.
 
-It is forbidden to ask outside persons for help.
+## Users
 
-
+kukla - Mateusz Kusibab
 Mateusz Laskowski -> gemmi-arts
