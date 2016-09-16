@@ -3,3 +3,11 @@
     height:500px;
     background:#eee;
 }
+
+#dragThis {
+    width: 6em;
+    height: 6em;
+    padding: 0.5em;
+    border: 3px solid #ccc;
+    border-radius: 0 1em 1em 1em;
+}
