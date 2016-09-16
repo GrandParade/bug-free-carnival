@@ -1,5 +1,4 @@
-$(document).ready(function() {
-    setCookie('us','helloworld','');
+$(document).ready(function() {    
     
     $('#dragThis').draggable(
     {
@@ -13,9 +12,19 @@ $(document).ready(function() {
     });
 });
 
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+localStorage.setItem("lastname", "Smith");//zapis
+//localStorage.getItem("lastname");//odczyt
+//localStorage.removeItem("lastname");//usuwanie
+
+localStorage.setItem("name", "John");//zapis
+
+for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu wszystkich danych
+  alert( localStorage.getItem( localStorage.key( i ) ) );
 }
+
+var obj={
+    first:'ala',
+    second:'kot'
+    
+}
+
