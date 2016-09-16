@@ -1,5 +1,4 @@
-$(document).ready(function() {
-    setCookie('us','helloworld','');
+$(document).ready(function() {    
     
     $('#dragThis').draggable(
     {
@@ -23,4 +22,9 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu w
   alert( localStorage.getItem( localStorage.key( i ) ) );
 }
 
+var obj={
+    first:'ala',
+    second:'kot'
+    
+}
 
