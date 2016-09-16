@@ -112,3 +112,24 @@ function mysave(fieldId,val){//field id jest hashem
         alert(stringJson);
     }    
 }
+
+function createNotes(){//jeszcze nie ukonczona 
+    /*
+    for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu wszystkich danych
+        tempString=localStorage.getItem( localStorage.key( i );
+        tempObject=JSON.stringify('tempString');
+        notes.append('<div class="dragThis '+tempObject.hash+'"> '+
+                    '<div class="drag-head"> '+
+                        '<span class="glyphicon glyphicon-remove remove" aria-hidden="true"></span> '+
+                    '</div> '+
+                    '<div class="drag-inner"> '+
+                      '  <ul class="position"> '+
+                          '  <li class="posX"></li> '+
+                          '  <li class="posY"></li> '+
+                      '  </ul> '+
+                        '<textarea name="txt" ondblclick="mysave(\''+hash+'\',this.value);" class="dragThis-txt" placeholder="note..."></textarea> '+
+                  '  </div> '+
+                '</div>');
+        
+    }*/
+}
