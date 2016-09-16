@@ -40,13 +40,13 @@
 }
 
 .dragThis .drag-inner textarea {
+    min-width: 100px;
     width: 100%;
     min-height: 100px;
     border: 1px solid #ccc;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    resize: vertical;
     padding: 5px;
     color: #000;
 }
