@@ -43,6 +43,8 @@ $(document).ready(function() {
     $("#addNewNote").click(function() {
         addNewNote();
     });
+    makeDraggable("dragThis");
+
 });
 
 localStorage.setItem("lastname", "Smith");//zapis
