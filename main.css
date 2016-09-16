@@ -1,13 +1,38 @@
-#block {
-    width:500px;
-    height:500px;
-    background:#eee;
-}
-
-.simple-note {
-    width: 6em;
-    height: 6em;
-    padding: 0.5em;
+.dragThis {
+    width: 200px;
+    height: auto !important;
     border: 3px solid #ccc;
-    border-radius: 0 1em 1em 1em;
+    border-radius: 5px;
+}
+.dragThis .drag-head {
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    height: 25px;
+    cursor: pointer;
+    background: #eee;
+}
+.dragThis .drag-inner {
+    padding: 0.5em;
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.2;
+}
+.dragThis .drag-inner:hover {
+    color: #000;
+}
+.dragThis .remove {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #ccc;
+}
+.dragThis .remove:hover {
+    color: #000;
+}
+.dragThis .position {
+    color: red;
+    padding-left: 0;
+}
+.dragThis .position li {
+    list-style: none;
 }
