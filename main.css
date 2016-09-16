@@ -1,5 +1,6 @@
 .dragThis {
     width: 200px;
+    float: left;
     height: auto !important;
     border: 3px solid #ccc;
     -webkit-border-radius: 5px;

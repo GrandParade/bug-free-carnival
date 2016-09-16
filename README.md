@@ -2,7 +2,7 @@
 
 ## Team Goal
 
-Your goal is to create and finish custom product. Product requirements: 
+Your goal is to create and finish custom product. Product requirements:
 
 - it needs to be SPA webpage
 - it needs to allow user to add new sticky notes to his desktop
@@ -14,10 +14,13 @@ Your goal is to create and finish custom product. Product requirements:
 - user should be able to add notification for notes (kind of alert which will ring when time comes)
 - user should be able to add expiration for notes (time when note is archived)
 
-You can use any technology you want, any framework and any JS version (ES5, ES6). You have full access to internet (full documentation you need). Application needs to run smoothly in Chrome browser. 
+You can use any technology you want, any framework and any JS version (ES5, ES6). You have full access to internet (full documentation you need). Application needs to run smoothly in Chrome browser.
 
-This is team task, so everyone should work and contribute to final solution. 
+This is team task, so everyone should work and contribute to final solution.
 
-During your task you can ask supervisors if anything is unclear. 
+During your task you can ask supervisors if anything is unclear.
 
-It is forbidden to ask outside persons for help. 
+It is forbidden to ask outside persons for help.
+
+
+Mateusz Laskowski -> gemmi-arts

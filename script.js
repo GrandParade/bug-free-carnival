@@ -10,6 +10,12 @@ $(document).ready(function() {
     var notes = $("#notes");
     var storedNotes = [];
     
+    function changeZIndex(className) {
+      var element = $("."+className)[0];
+      var zIndex = $(element).css('z-index') || 1;
+      element.style.zIndex=zIndex+1;
+    }
+    
     function makeDraggable(className) {
       $('.'+className).draggable(
       {
@@ -53,6 +59,10 @@ $(document).ready(function() {
                         '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
                   '  </div> '+
                 '</div>');
+                
+      $( "."+hash ).on( "click", function() {
+        changeZIndex(hash);
+      });
                 
       storedNotes.push({createdAt: new Date(), hash : hash, content : '' });
       makeDraggable(hash);
