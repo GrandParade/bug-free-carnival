@@ -1,3 +1,4 @@
+var storedNotes = [];
 $(document).ready(function() {
     
     // DOUBLE CLICK FUNCTION
@@ -8,7 +9,7 @@ $(document).ready(function() {
     
     // NOTES SYSTEM
     var notes = $("#notes");
-    var storedNotes = [];
+    
     
     function makeDraggable(className) {
       $('.'+className).draggable(
@@ -50,7 +51,7 @@ $(document).ready(function() {
                           '  <li class="posX"></li> '+
                           '  <li class="posY"></li> '+
                       '  </ul> '+
-                        '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
+                        '<textarea name="txt" ondblclick="mysave(\''+hash+'\',this.value);" class="dragThis-txt" placeholder="note..."></textarea> '+
                   '  </div> '+
                 '</div>');
                 
@@ -85,3 +86,20 @@ var stringJson =JSON.stringify(obj);//przerobienie obiektu na string do zapisu
 console.log(stringJson);
 var objBack=JSON.parse( stringJson );//odczyt obiektu ze stringa
 console.log(objBack);
+
+
+
+
+function mysave(fieldId,val){//field id jest hashem
+    
+    for(i=0;i<storedNotes.length;i++){
+        if(storedNotes[i].hash==fieldId){
+            temp = storedNotes[i];
+            temp.content = val;            
+        }
+        
+        var stringJson = JSON.stringify(temp);//przerobienie obiektu na string do zapisu
+        localStorage.setItem(fieldId, stringJson);//zapis
+        alert(stringJson);
+    }    
+}
