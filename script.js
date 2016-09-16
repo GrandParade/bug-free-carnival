@@ -12,8 +12,8 @@ $(document).ready(function() {
               var offset = $(this).offset();
               var xPos = offset.left;
               var yPos = offset.top;
-              $('#posX').text('x: ' + xPos);
-              $('#posY').text('y: ' + yPos);
+              $(this).find('.posX').text('x: ' + xPos);
+              $(this).find('.posY').text('x: ' + yPos);
           }
       });
     }
@@ -23,14 +23,14 @@ $(document).ready(function() {
       
       var hash = md5(new Date());
       
-      notes.append('          <div class="dragThis '+hash+'"> '+
+      notes.append('<div class="dragThis '+hash+'"> '+
                     '<div class="drag-head"> '+
                         '<span class="glyphicon glyphicon-remove remove" aria-hidden="true"></span> '+
                     '</div> '+
                     '<div class="drag-inner"> '+
                       '  <ul class="position"> '+
-                          '  <li id="posX"></li> '+
-                          '  <li id="posY"></li> '+
+                          '  <li class="posX"></li> '+
+                          '  <li class="posY"></li> '+
                       '  </ul> '+
                         '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
                   '  </div> '+
