@@ -19,6 +19,19 @@ $(document).ready(function() {
               var yPos = offset.top;
               $(this).find('.posX').text('x: ' + xPos);
               $(this).find('.posY').text('x: ' + yPos);
+              
+              var currentNote = _.find(storedNotes, (note)=> {
+                return note.hash === className;
+              });
+              
+              currentNote.xPos = xPos;
+              currentNote.yPos = yPos;
+              
+              var afterRemoveCurrent = _.remove(storedNotes, function(note) {
+                return note.hash === className;
+              });
+              
+              storedNotes.push(currentNote);
           }
       });
     }
@@ -41,13 +54,8 @@ $(document).ready(function() {
                   '  </div> '+
                 '</div>');
                 
-      makeDraggable(hash);
-      
       storedNotes.push({createdAt: new Date(), hash : hash, content : '' });
-      
-      console.log(storedNotes);
-      
-
+      makeDraggable(hash);
     }
     
     $("#addNewNote").click(function() {
@@ -71,7 +79,7 @@ var obj={//przykladowy obiekt
     first:'ala',
     second:'kot'
     
-}
+};
 console.log(obj);
 var stringJson =JSON.stringify(obj);//przerobienie obiektu na string do zapisu
 console.log(stringJson);
