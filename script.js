@@ -22,6 +22,18 @@ $(document).ready(function() {
                         '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
                   '  </div> '+
                 '</div>');
+                
+                
+                $('.'+hash).draggable(
+                {
+                    drag: function(){
+                        var offset = $(this).offset();
+                        var xPos = offset.left;
+                        var yPos = offset.top;
+                        $('#posX').text('x: ' + xPos);
+                        $('#posY').text('y: ' + yPos);
+                    }
+                });
     }
     
     $("#addNewNote").click(function() {
@@ -29,7 +41,7 @@ $(document).ready(function() {
     });
     
     
-    $('#dragThis').draggable(
+    $('.dragThis').draggable(
     {
         drag: function(){
             var offset = $(this).offset();
