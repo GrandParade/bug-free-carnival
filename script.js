@@ -1,9 +1,18 @@
 $(document).ready(function() {
     
-    // DOUBLE CLICK FUNCTION
-    $( ".dragThis" ).dblclick(function() {
-//        $(".dragThis").css('width', '100%');
-//        $('.dragThis').css("height", $(document).height());
+    // DOUBLE CLICK FUNCTION    
+    $('.dragThis').dblclick(function() {
+        $(this).css({"position": 'fixed', 'width': '100%', 'height': '100%', 'top': '0', 'left': '0'});
+        $(this).find('.drag-head').css('height', '40px');
+        $(this).find('textarea').css('font-size', '20px');
+        $(this).find('.remove').css('font-size', '30px');
+    });
+    
+    $('.dragThis').click(function() {
+        $(this).css({"position": "relative", "width": "200px", "height": "auto"});
+        $(this).find('.drag-head').css('height', '25px');
+        $(this).find('textarea').css('font-size', '13px');
+        $(this).find('.remove').css('font-size', '14px');
     });
     
     // NOTES SYSTEM

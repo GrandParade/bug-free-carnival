@@ -1,6 +1,6 @@
 .dragThis {
     width: 200px;
-    height: auto !important;
+/*    height: auto !important;*/
     border: 3px solid #ccc;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -41,6 +41,8 @@
 }
 
 .dragThis .drag-inner textarea {
+    font-size: 13px;
+    line-height: 1.2;
     min-width: 100px;
     width: 100%;
     min-height: 100px;
