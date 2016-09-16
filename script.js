@@ -1,5 +1,16 @@
 $(document).ready(function() {
     setCookie('us','helloworld','');
+    
+    $('#dragThis').draggable(
+    {
+        drag: function(){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+        }
+    });
 });
 
 function setCookie(cname, cvalue, exdays) {
@@ -8,4 +19,3 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
-
