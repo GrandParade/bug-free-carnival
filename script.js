@@ -1,4 +1,4 @@
-$(document).ready(function() {    
+$(document).ready(function() {
     
     
     // NOTES SYSTEM
@@ -10,12 +10,18 @@ $(document).ready(function() {
       
       var hash = md5(new Date());
       
-      notes.append('<div class="simple-note">' +
-                     '<ul>' +
-                         '<li id="posX"></li>' +
-                         '<li id="posY"></li>' +
-                    '</ul>' +
-                   '</div>');
+      notes.append('          <div class="dragThis"> '+
+                    '<div class="drag-head"> '+
+                        '<span class="glyphicon glyphicon-remove remove" aria-hidden="true"></span> '+
+                    '</div> '+
+                    '<div class="drag-inner"> '+
+                      '  <ul class="position"> '+
+                          '  <li id="posX"></li> '+
+                          '  <li id="posY"></li> '+
+                      '  </ul> '+
+                        '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
+                  '  </div> '+
+                '</div>');
     }
     
     $("#addNewNote").click(function() {
@@ -50,4 +56,3 @@ var obj={
     second:'kot'
     
 }
-
