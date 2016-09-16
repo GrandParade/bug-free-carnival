@@ -42,12 +42,13 @@ localStorage.setItem("lastname", "Smith");//zapis
 localStorage.setItem("name", "John");//zapis
 
 for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu wszystkich danych
-  alert( localStorage.getItem( localStorage.key( i ) ) );
+  //alert( localStorage.getItem( localStorage.key( i ) ) );
 }
 
 var obj={
     first:'ala',
-    second:'kot'
-    
+    second:'kot'    
 }
+var string =JSON.stringify(obj);
+//alert(string);
 
