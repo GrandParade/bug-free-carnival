@@ -22,6 +22,18 @@ $(document).ready(function() {
                         '<textarea name="txt" class="dragThis-txt" placeholder="note..."></textarea> '+
                   '  </div> '+
                 '</div>');
+                
+                
+                $('.'+hash).draggable(
+                {
+                    drag: function(){
+                        var offset = $(this).offset();
+                        var xPos = offset.left;
+                        var yPos = offset.top;
+                        $('#posX').text('x: ' + xPos);
+                        $('#posY').text('y: ' + yPos);
+                    }
+                });
     }
     
     $("#addNewNote").click(function() {
@@ -29,7 +41,7 @@ $(document).ready(function() {
     });
     
     
-    $('#dragThis').draggable(
+    $('.dragThis').draggable(
     {
         drag: function(){
             var offset = $(this).offset();
@@ -51,8 +63,15 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {//petla do odczytu w
   //alert( localStorage.getItem( localStorage.key( i ) ) );
 }
 
-var obj={
+var obj={//przykladowy obiekt
     first:'ala',
     second:'kot'
     
 }
+console.log(obj);
+var stringJson =JSON.stringify(obj);//przerobienie obiektu na string do zapisu
+console.log(stringJson);
+var objBack=JSON.parse( stringJson );//odczyt obiektu ze stringa
+console.log(objBack);
+
+
