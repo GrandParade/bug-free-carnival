@@ -10,7 +10,7 @@ $(document).ready(function() {
       
       var hash = md5(new Date());
       
-      notes.append('          <div class="dragThis"> '+
+      notes.append('          <div class="dragThis '+hash+'"> '+
                     '<div class="drag-head"> '+
                         '<span class="glyphicon glyphicon-remove remove" aria-hidden="true"></span> '+
                     '</div> '+
