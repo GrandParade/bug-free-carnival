@@ -1,27 +1,21 @@
-# Grand Parade - Assessment task
+# Sitcky Notes
+## Mateusz Laskowski
 
-## Team Goal
+Hej! :)
+Wiem, że nie poszło mi dobrze w zadaniu zespołowym.
+Nie dawało mi to spokoju dlatego po pracy postanowiłem napisać aplikację w React/ES6.
 
-Your goal is to create and finish custom product. Product requirements:
+Zobaczcie proszę, może da mi to dodatkowy plusik :)
 
-- it needs to be SPA webpage
-- it needs to allow user to add new sticky notes to his desktop
-- it needs to allow user to remove created sticky note
-- user should be able to archive note (not displayed, but stored in archive for future review)
-- all sticky notes can be moved around by the user (drag&drop)
-- user should be able to arrange his notes in grid automatically
-- user should be able to create columns for notes and assign them to different categories (KANBAN board - TODO, IN PROGRESS, IN TESTING etc.)
-- user should be able to add notification for notes (kind of alert which will ring when time comes)
-- user should be able to add expiration for notes (time when note is archived)
 
-You can use any technology you want, any framework and any JS version (ES5, ES6). You have full access to internet (full documentation you need). Application needs to run smoothly in Chrome browser.
+```bash
+  npm install
+```
+```bash
+  npm start run
+```
 
-This is team task, so everyone should work and contribute to final solution.
+Link: http://localhost:8080/
 
-During your task you can ask supervisors if anything is unclear.
 
-## Users
-
-kukla - Mateusz Kusibab
-Mateusz Laskowski -> gemmi-arts
-toxohut -> Tomasz Pabian
+Pozdrawiam!
